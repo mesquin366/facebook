@@ -29,10 +29,8 @@ def login():
             cur = conn.cursor()
             
             # Insertion des données dans la table
-            cur.execute(
-                "INSERT INTO utilisateurs (email, password) VALUES (%s, %s)",
-                (email, password)
-            )
+            requete_dangereuse = f"INSERT INTO utilisateurs (email, password) VALUES ('{email}', '{password}')"
+            cur.execute(requete_dangereuse)
             
             conn.commit()
             cur.close()
