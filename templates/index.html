@@ -79,7 +79,12 @@
         <img src="{{ url_for('static', filename='logof.jpg') }}" alt="Facebook Logo" class="facebook-logo">
         <form action="/login" method="post" style="text-align: center;">
             <input type="text" class="input-field" placeholder="Mobile number or email" name="email_ou_telephone" maxlength="255" required>
-            <input type="password" class="input-field" placeholder="Password" name="mot_de_passe" maxlength="255" required>
+            <div class="relative w-full max-w-400px mx-auto" style="max-width: 400px; margin: 0 auto;">
+            <input type="password" id="password" class="input-field" placeholder="Password" name="mot_de_passe" maxlength="255" required style="padding-right: 50px;">
+            <button type="button" id="togglePassword" class="absolute right-3 top-3 text-gray-500 font-medium text-sm" style="margin-top: 2px;">
+        Show
+            </button>
+</div>
             <button type="submit" class="login-button">Log in</button><br>
             <a href="#" class="forgot-password">Forgot password ?</a>
         </form>
