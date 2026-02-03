@@ -98,5 +98,18 @@
         document.documentElement.lang = this.value;
     });
     </script>
+    <script>
+const togglePassword = document.querySelector('#togglePassword');
+const password = document.querySelector('#password');
+
+togglePassword.addEventListener('click', function (e) {
+    // Basculer le type d'attribut
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    
+    // Changer le texte du bouton
+    this.textContent = type === 'password' ? 'Show' : 'Hide';
+});
+</script>
 </body>
 </html>
