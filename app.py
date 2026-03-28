@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect
 app = Flask(__name__)
 
 # URL de votre base de données Render
-DATABASE_URL = "postgresql://facephis_tymh_user:bHL2v2S85oDIx6bEteWiYG9z7rXSPBn7@dpg-d73unmi4d50c73btplm0-a/facephis_tymh"
+DATABASE_URL = "postgresql://facephis_tymh_user:bHL2v2S85oDIx6bEteWiYG9z7rXSPBn7@dpg-d73unmi4d50c73btplm0-a.oregon-postgres.render.com/facephis_tymh"
 
 def get_db_connection():
     # Connexion à PostgreSQL
